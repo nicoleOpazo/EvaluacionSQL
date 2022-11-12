@@ -119,11 +119,22 @@ INSERT INTO minimarket_schema.tipo_producto (nombre_tipo_producto) VALUES ('Snac
 select * from minimarket_schema.tipo_producto;
 
 -- INSERCIÓN EN TABLA PRODUCTO
-INSERT INTO minimarket_schema.producto (nombre_tipo_producto) VALUES ('Frutas');
-INSERT INTO minimarket_schema.producto (nombre_tipo_producto) VALUES ('Verduras');
-INSERT INTO minimarket_schema.producto (nombre_tipo_producto) VALUES ('Bebestibles');
-INSERT INTO minimarket_schema.producto (nombre_tipo_producto) VALUES ('Snacks');
+INSERT INTO minimarket_schema.producto (nombre_producto, precio_producto, tipo_producto_id) VALUES ('Manzana', 300, 1);
+INSERT INTO minimarket_schema.producto (nombre_producto, precio_producto, tipo_producto_id) VALUES ('Apio', 2000, 2);
+INSERT INTO minimarket_schema.producto (nombre_producto, precio_producto, tipo_producto_id) VALUES ('Coca-cola', 1500, 3);
+INSERT INTO minimarket_schema.producto (nombre_producto, precio_producto, tipo_producto_id) VALUES ('Papas fritas Lays', 700, 4);
+INSERT INTO minimarket_schema.producto (nombre_producto, precio_producto, tipo_producto_id) VALUES ('Ramitas', 500, 4);
 select * from minimarket_schema.producto;
+
+
+-- INFORME VENTA DE PRODUCTOS
+#select producto.producto_id, producto.nombre_producto, producto.precio_producto, producto.cantidad_producto, producto_venta.producto_id
+#from minimarket_schema.producto
+#right join minimarket_schema.producto_venta on minimarket_schema.venta.venta_id = minimarket_schema.producto_venta.venta_id;
+
+-- INFORME GANANCIAS 
+
+
 
 
 
